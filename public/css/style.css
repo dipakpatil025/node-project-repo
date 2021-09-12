@@ -1,0 +1,9 @@
+*{
+    /* color: blue; */
+}
+.dropdown-menu.show {
+    /* display: block; */
+    text-align: center;
+    margin-left: -84px;
+}
+

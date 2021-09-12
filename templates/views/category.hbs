@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    {{>nav}}
+    {{>login_modal}}
+    {{>Singup_modal}}
+    {{#if singupstatus}}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Something wrong ! </strong>Please singup again.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {{/if}}
+
+
+
+
+
+    <div class="container my-4 ">
+        <div class="jumbotron bg-secondary text-light my-4">
+            <h1 class="display-4">Welcome to {{category_name}} Section</h1>
+            <hr class="my-4">
+            <h2>Description</h2>
+            <p class="lead">
+                <?php echo $catdesc ?>
+            </p>
+            <hr class="my-4">
+            <p>Do not Spam / Advertising / Self-promote in the forums.<br>Do not post copyright-infringing material. ...
+                Do not post “offensive” posts, links or images. <br>
+                Do not cross post questions. <br>
+                Remain respectful of other members at all times.</p>
+            <a class="btn btn-success btn-lg mx-2 my-2" href="#" role="button">Learn more</a>
+        </div>
+
+    </div>
+
+
+
+
+
+ {{#if loginstatus}}
+
+    <div class="container my-3 ">
+        <!--  -->
+        <form action="" method="POST">
+            <h2>Ask Question</h2>
+            <div class="form-group my-2">
+                <label for="exampleInputEmail1">Problem Title</label>
+                <input type="text" class="form-control" id="question" name="question" aria-describedby="ptitle">
+                <small id="emailHelp" class="form-text text-muted">Keep your title short and crips.</small>
+            </div>
+            <div class="form-group my-2">
+                <label for="exampleInputPassword1">Description</label>
+                <textarea id="qdesc" name="qdesc" class="form-control"></textarea>
+            </div>
+
+            <button type="submit" class="my-2 btn btn-primary">Submit</button>
+        </form>
+    </div>
+{{else}}
+<h4 class="container">Please Login for post Qustion..........</h4>
+{{/if}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container" id="accordion">
+        <div class="card my-4 shadow p-3">
+            <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                    <div class="username"> <i class="fas fa-user-circle"></i> DIPAK
+                    <br>
+                        Q1) Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, vel?
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                            show
+                        </button>
+                    </div>
+                </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Morbi leo risus</li>
+                        <li class="list-group-item">Porta ac consectetur ac</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                </div>
+                
+            </div>
+
+        </div>
+        <div class="card my-4 shadow p-3">
+            <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                    <div class="username"> <i class="fas fa-user-circle"></i> DIPAK
+                    <br>
+                        Q1) Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, vel?
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                            show
+                        </button>
+                    </div>
+                </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Morbi leo risus</li>
+                        <li class="list-group-item">Porta ac consectetur ac</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                </div>
+                
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+            crossorigin="anonymous"></script>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+            integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
+            crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+</body>
+
+</html>
